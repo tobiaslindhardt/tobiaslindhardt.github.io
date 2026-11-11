@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Tobias Lindhardt – TV- og medietilrettelægger. Programmer, produktionshuse, egne brands og kontakt.">
+<meta property="og:title" content="Tobias Lindhardt – TV- & medietilrettelægger">
+<meta property="og:description" content="Tilrettelægger, udvikler og producer. Programmer til TV2, DR1, P3 og tvSyd.">
+<meta property="og:image" content="img/spritte.jpg">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Tobias Lindhardt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a broadcast "sendeplan" — portrait hero, a key-art poster wall, then houses, brands and the rundown of the rest. */
+:root{
+  --paper:#eceef0; --card:#ffffff; --ink:#121418; --muted:#5a606a; --line:rgba(18,20,24,.12);
+  --tally:#d92b24; --tile:#ffffff;
+  --p1:#1d2a3a; --p2:#3b1f1a; --p3:#14332f; --p4:#2a2340; --p5:#402c12; --p6:#22262c;
+  --intonature:#004743; --heimdall:#ff928b; --saga:#fefc0b; --signifly:#0d0f0a;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0f1114; --card:#181b20; --ink:#eceef1; --muted:#9aa1ab; --line:rgba(236,238,241,.12); --tally:#ff4a40; --tile:#f3f4f6; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0f1114; --card:#181b20; --ink:#eceef1; --muted:#9aa1ab; --line:rgba(236,238,241,.12); --tally:#ff4a40; --tile:#f3f4f6; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--tally);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(56px,6.5vw,92px);border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center}
+.eyebrow b{color:var(--tally);font-weight:500}
+h2{font-family:var(--display);font-stretch:125%;font-weight:850;text-transform:uppercase;font-size:clamp(30px,4.2vw,50px);line-height:.95;letter-spacing:-.01em;margin:12px 0 0;text-wrap:balance}
+.lede{max-width:60ch;color:var(--muted);margin:16px 0 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+
+/* HERO */
+.hero{padding-block:clamp(28px,5vw,56px) clamp(48px,7vw,88px)}
+.topbar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:28px}
+.onair{display:inline-flex;align-items:center;gap:8px;color:var(--ink)}
+.onair i{width:9px;height:9px;border-radius:50%;background:var(--tally);box-shadow:0 0 0 4px color-mix(in srgb,var(--tally) 22%,transparent);animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.onair i{animation:none}}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.name{font-family:var(--display);font-stretch:112%;font-weight:900;text-transform:uppercase;font-size:clamp(44px,6.6vw,96px);line-height:.86;letter-spacing:-.02em;margin:0}
+.name span{display:block}
+.name .thin{font-weight:400;font-stretch:62%;letter-spacing:0}
+.role{font-family:var(--display);font-stretch:100%;font-weight:600;font-size:clamp(19px,2.3vw,26px);margin:22px 0 0;line-height:1.2}
+.role em{font-style:normal;color:var(--tally)}
+.intro{max-width:52ch;margin:16px 0 0;color:var(--muted)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;font-family:inherit}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.portrait{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:4px;overflow:hidden;background:var(--p6)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:28% 30%;display:block}
+.portrait .tc{position:absolute;left:12px;right:12px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6);letter-spacing:.06em}
+.portrait .tc.t{top:10px}.portrait .tc.b{bottom:10px}
+.portrait .rec{display:inline-flex;gap:6px;align-items:center}
+.portrait .rec::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff3b30}
+.portrait::after{content:"";position:absolute;inset:18% 14%;border:1px solid rgba(255,255,255,.35);pointer-events:none}
+.aired{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 22px;align-items:baseline;margin-top:clamp(36px,5vw,56px);padding-top:18px;border-top:2px solid var(--ink)}
+.aired .eyebrow{margin-right:6px}
+.aired strong{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:clamp(20px,2.6vw,30px);text-transform:uppercase;letter-spacing:-.01em}
+
+/* KEY-ART WALL: 16:9 tiles, feature spans 2x2 */
+.wall{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px 20px}
+.tile{grid-column:span 4}
+.tile.q{grid-column:span 3}
+.tile.q h3{font-size:clamp(17px,1.45vw,21px);font-stretch:92%}
+.tile.wide{grid-column:span 3}
+.tile.wide h3{font-size:clamp(22px,2.2vw,30px)}
+.tile{display:flex;flex-direction:column;gap:12px;min-width:0;text-decoration:none;color:inherit}
+.tile .shot{position:relative;aspect-ratio:16/9;max-width:100%;border-radius:4px;overflow:hidden;background:var(--p6)}
+.tile .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+a.tile:hover .shot img{transform:scale(1.04)}
+.tile .ch{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tile .ch b{color:var(--ink);font-weight:500}
+.tile h3{font-family:var(--display);font-weight:850;font-stretch:112%;text-transform:uppercase;line-height:.92;letter-spacing:-.01em;margin:4px 0 0;font-size:clamp(19px,1.8vw,24px);text-wrap:balance}
+.tile .meta{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.4}
+.tile.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:0;background:var(--ink);color:var(--paper);border-radius:6px;overflow:hidden}
+.tile.feature .shot{border-radius:0;height:100%}
+.tile.feature .cap{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:clamp(24px,3vw,40px);justify-content:center}
+.tile.feature .ch{width:100%;color:color-mix(in srgb,var(--paper) 65%,transparent)}
+.tile.feature .ch b{color:var(--paper)}
+.tile.feature h3{font-size:clamp(28px,2.9vw,42px);margin:0}
+.tile.feature .meta{font-size:15px;color:color-mix(in srgb,var(--paper) 78%,transparent);margin:0}
+.tile.feature .chlogo{height:40px}
+.tile.feature .links a{border-color:var(--paper);color:var(--paper)}
+.tile.feature .links a:first-child{background:var(--paper);color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.links a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--ink);font-weight:600;font-size:14px;text-decoration:none}
+.links a:first-child{background:var(--ink);color:var(--paper)}
+.links a:hover{transform:translateY(-1px)}
+.play::before{content:"";width:0;height:0;border-left:8px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.slate{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#fff;text-align:center;background:
+  repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 14px,transparent 14px 28px),var(--p6)}
+.slate strong{font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(22px,2.4vw,32px);line-height:1}
+.slate .rec,.slate .tc{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;display:inline-flex;align-items:center;gap:8px}
+.slate .rec::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff3b30;animation:blink 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.slate .rec::before{animation:none}}
+.slate .soon,.brandshot .soon{position:absolute;left:0;right:0;bottom:14px;text-align:center;font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(14px,1.3vw,18px);letter-spacing:.04em;color:#fff}
+.brandshot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,6,12,.55));pointer-events:none}
+.brandshot .soon{z-index:1}
+.extra{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:4px;text-decoration:none;color:inherit;margin-top:8px}
+.extra img{width:64px;height:64px;object-fit:contain}
+.extra b{font-family:var(--display);font-stretch:112%;font-weight:800;text-transform:uppercase;font-size:20px;display:block;line-height:1}
+.extra span{font-size:14px;color:var(--muted)}
+.extra .go{font-weight:600;font-size:14px;color:var(--ink);display:inline-flex;gap:8px;align-items:center;white-space:nowrap}
+.badge{display:inline-block;background:var(--tally);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border-radius:2px;justify-self:start}
+.chlogo{height:44px;display:flex;align-items:center}
+.chlogo img{height:100%;width:auto;border-radius:4px}
+
+/* HOUSES */
+.houses{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
+.house{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1.15fr);gap:clamp(20px,3vw,44px);align-items:center;padding-block:24px;border-bottom:1px solid var(--line);min-width:0}
+.house .logo{height:112px;border-radius:4px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--tile);padding:14px}
+.house .logo img{max-height:100%;max-width:100%;object-fit:contain}
+.house .logo.wordmark span{font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:24px;letter-spacing:.02em;color:#121418}
+.house .logo.dark{background:#1b1416;padding:0}
+.house .logo.dark img{width:100%;height:100%;max-height:none;object-fit:cover}
+.house .yr{font-family:var(--mono);font-size:12px;color:var(--tally);letter-spacing:.08em}
+.house h3{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:clamp(22px,2.2vw,28px);margin:4px 0 0;text-transform:uppercase;line-height:1}
+.house .r{font-weight:600;font-size:15px;margin-top:6px}
+.house p{margin:10px 0 0;color:var(--muted);font-size:15px;max-width:44ch}
+.house ul{margin:0;padding:0;list-style:none;font-size:15px;border-top:1px solid var(--line)}
+.house li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.house li span:last-child{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+
+/* BRANDS */
+.brands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.brand{border-radius:4px;padding:clamp(22px,3vw,36px);display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:start;min-width:0}
+.brand img{width:clamp(88px,10vw,128px);aspect-ratio:1;border-radius:4px;object-fit:cover}
+.brand .k{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.brand h3{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(26px,3.2vw,40px);text-transform:uppercase;line-height:.95;margin:6px 0 12px}
+.brand p{margin:0;font-size:15px;max-width:48ch}
+.brand .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.brand .tags span{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid currentColor;opacity:.9}
+.b-into{background:var(--intonature);color:#e4f1ec}
+.b-heim{background:var(--heimdall);color:#2a0f0c}
+.minor{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.mini{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:14px;min-width:0}
+.mini img{width:56px;height:56px;border-radius:3px;object-fit:cover;flex:none}
+.mini img.ct{object-fit:contain}
+.mini b{display:block;font-size:15px}
+.mini span{display:block;font-size:13px;color:var(--muted);line-height:1.4}
+
+.others{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.other{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.other img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.other>div{padding:20px}
+.other .yr{font-family:var(--mono);font-size:12px;color:var(--tally);letter-spacing:.08em}
+.other h3{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:24px;margin:4px 0 0;text-transform:uppercase;line-height:1}
+.other .r{font-weight:600;font-size:15px;margin-top:6px}
+.other p{margin:10px 0 0;color:var(--muted);font-size:15px}
+
+/* RUNDOWN */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,48px)}
+.cols h3{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.edu{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.edu .lg{width:48px;height:48px;border-radius:3px;background:var(--tile);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none}
+.edu .lg img{max-width:100%;max-height:100%;object-fit:contain}
+.edu b{display:block;font-size:15px;line-height:1.25}
+.edu span{display:block;font-size:13px;color:var(--muted)}
+.edu .y{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap;align-self:flex-start;padding-top:2px}
+.tools{display:flex;flex-direction:column;gap:14px}
+.tools div span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips i{font-style:normal;font-size:13px;font-weight:500;padding:5px 10px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+.lang{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center}
+.lang b{font-size:15px}
+.meter{display:flex;gap:3px}
+.meter i{width:100%;max-width:26px;height:6px;border-radius:1px;background:var(--line)}
+.meter i.on{background:var(--ink)}
+.lang small{grid-column:2;font-size:12px;color:var(--muted);margin:-2px 0 8px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:var(--paper);border-top:0}
+.contact .eyebrow{color:color-mix(in srgb,var(--paper) 65%,transparent)}
+.contact h2{font-size:clamp(36px,7vw,92px)}
+.clist{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:1px;margin-top:40px;background:color-mix(in srgb,var(--paper) 18%,transparent);border:1px solid color-mix(in srgb,var(--paper) 18%,transparent)}
+.citem{background:var(--ink);padding:18px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.citem span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.65}
+.citem a,.citem b{font-weight:600;font-size:16px;overflow-wrap:anywhere;text-decoration:none}
+.citem a:hover{text-decoration:underline}
+.copy{align-self:flex-start;background:none;border:1px solid color-mix(in srgb,var(--paper) 35%,transparent);color:inherit;border-radius:999px;font:inherit;font-size:12px;padding:3px 10px;cursor:pointer;margin-top:4px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;font-family:var(--mono);font-size:12px;opacity:.6}
+
+@media (max-width:980px){
+  .wall{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tile,.tile.wide,.tile.q{grid-column:span 1}
+  .tile.feature{grid-column:1/-1;grid-template-columns:1fr}
+  .house{grid-template-columns:160px minmax(0,1fr)}
+  .house ul{grid-column:1/-1}
+  .cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .others{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .brands{grid-template-columns:1fr}
+  .clist{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:700px){
+  .hero-grid{grid-template-columns:1fr}
+  .portrait{max-width:420px;aspect-ratio:1/1}
+  .wall{grid-template-columns:1fr}
+  .house{grid-template-columns:1fr}
+  .house .logo{height:96px;max-width:240px}
+  .extra{grid-template-columns:auto minmax(0,1fr)}
+  .extra .go{grid-column:2}
+  .cols,.minor,.others{grid-template-columns:1fr}
+  .brand{grid-template-columns:1fr}
+  .clist{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+
+<header class="wrap hero">
+  <div class="topbar">
+    <span class="onair"><i></i>Klar til næste produktion</span>
+    <span>København SV · DMJX 2025</span>
+  </div>
+  <div class="hero-grid">
+    <div>
+      <h1 class="name"><span>Tobias</span><span>Lindhardt</span></h1>
+      <p class="role">TV- &amp; medietilrettelægger. <em>Udvikler, sælger og producerer</em> indhold fra idé til premiere.</p>
+      <p class="intro">Jeg har tilrettelagt programmer til TV2, DR1, P3 og tvSyd, pitchet formater til de store salgsrunder og bygget to brands fra bunden. Jeg kan både stå med kameraet, skrive pitchen og lægge strategien for, hvordan indholdet bliver set.</p>
+      <div class="cta">
+        <a class="btn solid" href="#kontakt">Kontakt mig</a>
+        <a class="btn" href="#programmer">Se mine programmer</a>
+      </div>
+    </div>
+    <figure class="portrait" style="margin:0">
+      <img src="img/portrait.jpg" alt="Portræt af Tobias Lindhardt i en strikket sweater i en vinterskov">
+      <div class="tc t"><span class="rec">REC</span><span>CAM A</span></div>
+      <div class="tc b"><span>TC 00:26:11:04</span><span>4K · 25P</span></div>
+    </figure>
+  </div>
+  <div class="aired">
+    <span class="eyebrow">Sendt på</span>
+    <strong>TV2</strong><strong>DR1</strong><strong>P3</strong><strong>tvSyd</strong><strong>TV2 Play</strong>
+  </div>
+</header>
+
+<main>
+<section id="programmer">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><b>●</b> Programmer</div>
+        <h2>Det har jeg lavet</h2>
+      </div>
+      <p class="lede" style="margin:0;max-width:44ch">Udvalgte titler, jeg har tilrettelagt og udviklet hos Collectif, Nordisk Film TV, Mastiff, Strong Productions og som selvstændig.</p>
+    </div>
+
+    <div class="wall">
+      <div class="tile feature">
+        <a class="shot" href="https://www.tvsyd.dk/et-flydende-faellesskab" target="_blank" rel="noopener"><img src="img/spritte.jpg" alt="Key art til Æ Spritte: tre medvirkende i havet foran en spritbåd, Sønderborg Slot og Solofabrikken"></a>
+        <div class="cap">
+          <span class="chlogo"><img src="img/tvsyd.png" alt="tvSyd"></span>
+          <div class="ch"><b>tvSyd · TV2 Play</b><span>Premiere sep. 2025</span></div>
+          <span class="badge">Egen idé · solgt · produceret</span>
+          <h3>Æ Spritte – Et Flydende Fællesskab</h3>
+          <p class="meta">Dokumentar om de sagnomspundne og hedengangne spritbåde i Sønderjylland. Jeg udviklede ideen, solgte den til tvSyd og producerede den.</p>
+          <div class="links">
+            <a href="https://www.tvsyd.dk/et-flydende-faellesskab" target="_blank" rel="noopener">tvSyd</a>
+            <a href="https://play.tv2.dk/serie/ae-spritte-et-flydende-faellesskab-tvsyd" target="_blank" rel="noopener">TV2 Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="tile q">
+        <div class="shot slate" role="img" aria-label="Collectif – kommer snart">
+          <img src="img/collectif_w.png" alt="Collectif" style="width:46%;height:auto;margin-block:6px">
+          <span class="soon">Kommer snart</span>
+        </div>
+        <div><div class="ch"><b>TV2</b><span>Collectif · Efterår 2026</span></div><h3>Underholdnings&shy;format</h3><p class="meta">Tilrettelægger</p></div>
+      </div>
+      <div class="tile q">
+        <div class="shot brandshot" role="img" aria-label="Nordisk Film TV – kommer snart">
+          <img src="img/nordisk_full.jpg" alt="">
+          <span class="soon">Kommer snart</span>
+        </div>
+        <div><div class="ch"><b>TV2 Echo</b><span>Nordisk Film TV · 2026</span></div><h3>Underholdnings&shy;program</h3><p class="meta">Tilrettelægger</p></div>
+      </div>
+      <div class="tile q">
+        <div class="shot"><img src="img/korpset.jpg" alt="Key art til Korpset" loading="lazy"></div>
+        <div><div class="ch"><b>TV2</b><span>Mastiff · 2026</span></div><h3>Korpset S09</h3><p class="meta">Tilrettelægger</p></div>
+      </div>
+      <div class="tile q">
+        <div class="shot"><img src="img/ftve.jpg" alt="Key art til Først Til Verdens Ende" loading="lazy"></div>
+        <div><div class="ch"><b>TV2</b><span>Strong · S04–S05</span></div><h3>Først Til Verdens Ende</h3><p class="meta">Posttilrettelægger</p></div>
+      </div>
+      <div class="tile">
+        <div class="shot"><img src="img/flokken.jpg" alt="Key art til Flokken" loading="lazy"></div>
+        <div><div class="ch"><b>TV2</b><span>Strong · S01–S02</span></div><h3>Flokken</h3><p class="meta">Posttilrettelægger</p></div>
+      </div>
+      <div class="tile">
+        <div class="shot"><img src="img/samtale.jpg" alt="Still fra En Særlig Samtale" loading="lazy"></div>
+        <div><div class="ch"><b>DR1</b><span>Strong</span></div><h3>En Særlig Samtale</h3><p class="meta">Posttilrettelægger</p></div>
+      </div>
+      <div class="tile">
+        <div class="shot"><img src="img/udstillet.jpg" alt="Still fra Udstillet" loading="lazy"></div>
+        <div><div class="ch"><b>P3</b><span>Strong</span></div><h3>Udstillet</h3><p class="meta">Tilrettelægger</p></div>
+      </div>
+      <a class="extra" href="https://youtu.be/e0S0hCXlbw0" target="_blank" rel="noopener">
+        <img src="img/skabelonloftet.png" alt="Skabelonloftets logo">
+        <div><b>Trappens Testamente</b><span>Film for Skabelonloftet, der binder B&amp;W-bygningens historie sammen med den værdi, stedet skaber i dag.</span></div>
+        <span class="go play">Se video</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="huse">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><b>●</b> Produktionsselskaber</div>
+        <h2>Huse jeg har arbejdet i</h2>
+      </div>
+    </div>
+    <div class="houses">
+      <article class="house">
+        <div class="logo"><img src="img/collectif.png" alt="Collectif" style="width:80%"></div>
+        <div><div class="yr">Efterår 2026</div><h3>Collectif</h3><div class="r">Tilrettelægger</div></div>
+        <ul>
+          <li><span>Underholdningsformat – ikke publiceret endnu</span><span>TV2</span></li>
+        </ul>
+      </article>
+      <article class="house">
+        <div class="logo dark"><img src="img/nordisk_c.png" alt="Nordisk Film TV"></div>
+        <div><div class="yr">2026</div><h3>Nordisk Film TV</h3><div class="r">Tilrettelægger og udvikler</div></div>
+        <ul>
+          <li><span>Underholdningsprogram – ikke publiceret endnu</span><span>TV2 Echo</span></li>
+          <li><span>Tilrettelæggelse på produktion</span><span>2026</span></li>
+          <li><span>Udvikling til salgsrunderne</span><span>DR · TV2</span></li>
+        </ul>
+      </article>
+      <article class="house">
+        <div class="logo"><img src="img/mastiff.png" alt="Mastiff"></div>
+        <div><div class="yr">2026</div><h3>Mastiff</h3><div class="r">Tilrettelægger</div></div>
+        <ul>
+          <li><span>Korpset S09</span><span>TV2</span></li>
+        </ul>
+      </article>
+      <article class="house">
+        <div class="logo"><img src="img/strong.png" alt="Strong Productions"></div>
+        <div><div class="yr">2023–2025</div><h3>Strong Productions</h3><div class="r">Tilrettelægger og udvikler</div><p>Erfaring med alle led af tv- og indholdsproduktion. Udviklede og pitchede desuden nye formater til DR.</p></div>
+        <ul>
+          <li><span>Først Til Verdens Ende S04–S05</span><span>TV2</span></li>
+          <li><span>En Særlig Samtale</span><span>DR1</span></li>
+          <li><span>Flokken S01–S02</span><span>TV2</span></li>
+          <li><span>Udstillet</span><span>P3</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="brands">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><b>●</b> Iværksætter</div>
+        <h2>Brands jeg har bygget</h2>
+      </div>
+      <p class="lede" style="margin:0;max-width:44ch">Ved siden af tv har jeg drevet egne virksomheder. Det har lært mig at tænke publikum, kanaler og forretning ind fra starten.</p>
+    </div>
+    <div class="brands">
+      <article class="brand b-into">
+        <img src="img/intonature.png" alt="Intonature-logo: bjerge, træer og fugle i en cirkel">
+        <div>
+          <div class="k">Indehaver · 2024</div>
+          <h3>Intonature</h3>
+          <p>Webshop med letvægts og foldbart outdoorudstyr. Jeg byggede brandet fra bunden: manifest, visuel identitet, aktivering og strategi på sociale medier, både betalt og organisk.</p>
+          <div class="tags"><span>Brand-manifest</span><span>Visuel identitet</span><span>E-commerce</span><span>Paid social</span></div>
+        </div>
+      </article>
+      <article class="brand b-heim">
+        <img src="img/heimdall.png" alt="Heimdall Media-logo">
+        <div>
+          <div class="k">Indehaver · 2020–2023</div>
+          <h3>Heimdall Media</h3>
+          <p>Min egen konsulentforretning. Jeg skabte vækst for virksomheder gennem digital tilstedeværelse med fokus på organisk indhold og annoncering på sociale platforme.</p>
+          <div class="tags"><span>Indhold</span><span>Annoncering</span><span>Meta for Business</span><span>Vækst</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="andet">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><b>●</b> Bureau og projekter</div>
+        <h2>Flere erfaringer</h2>
+      </div>
+    </div>
+    <div class="others">
+      <article class="other"><img src="img/signifly.png" alt="Signifly-logo"><div><div class="yr">2020–2021</div><h3>Signifly</h3><div class="r">Konsulent</div><p>Udviklede nye digitale koncepter til bureauets kunder, eksekverede kommunikationsindsatser og arbejdede med salg og salgsstrategi.</p></div></article>
+      <article class="other"><img src="img/saga.png" alt="SAGA-logo"><div><div class="yr">2022</div><h3>SAGA</h3><div class="r">Videoperson, frivillig</div><p>Konceptudviklede, optog og klippede indhold til den ungdomspolitiske organisations sociale kanaler.</p></div></article>
+      <article class="other"><img src="img/aiasound.png" alt="AiaSound-logo"><div><div class="yr">2022</div><h3>AiaSound</h3><div class="r">Intern dokumentar</div><p>Var med til at producere en intern dokumentar om festivalen, og om hvordan man skaber Københavns bedste festival.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="baggrund">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><b>●</b> Baggrund</div>
+        <h2>Uddannelse og værktøjer</h2>
+      </div>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Uddannelse</h3>
+        <div class="edu"><div class="lg"><img src="img/dmjx.png" alt="DMJX"></div><div><b>Danmarks Medie- og Journalisthøjskole</b><span>TV- og medietilrettelæggelse</span></div><span class="y">2021–25</span></div>
+        <div class="edu"><div class="lg"><img src="img/upv.png" alt="Universidad del País Vasco"></div><div><b>Universidad del País Vasco</b><span>Ciencias Sociales y de la Comunicación</span></div><span class="y">2022–23</span></div>
+        <div class="edu"><div class="lg"><img src="img/detblaa.png" alt="Det Blå Gymnasium"></div><div><b>Det Blå Gymnasium</b><span>HHX, marketing og innovation</span></div><span class="y">2015–18</span></div>
+      </div>
+      <div>
+        <h3>Værktøjer</h3>
+        <div class="tools">
+          <div><span>Klip og grafik</span><div class="chips"><i>Premiere Pro</i><i>After Effects</i><i>Photoshop</i><i>CapCut</i><i>Canva</i></div></div>
+          <div><span>Design og pitch</span><div class="chips"><i>Figma</i><i>Wordpress</i></div></div>
+          <div><span>Marketing</span><div class="chips"><i>Meta for Business</i><i>Klaviyo</i></div></div>
+          <div><span>Generativ AI</span><div class="chips"><i>Claude</i><i>ChatGPT</i></div></div>
+        </div>
+      </div>
+      <div>
+        <h3>Sprog</h3>
+        <div class="lang">
+          <b>Dansk</b><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><small>Modersmål</small>
+          <b>Engelsk</b><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><small>Flydende</small>
+          <b>Spansk</b><div class="meter"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><small>Let øvet</small>
+          <b>Tysk</b><div class="meter"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><small>Let øvet</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="contact">
+  <div class="wrap">
+    <div class="eyebrow"><b>●</b> Kontakt</div>
+    <h2>Skal vi arbejde<br>sammen?</h2>
+    <div class="clist">
+      <div class="citem"><span>E-mail</span><b id="mail">tobias.lindhardt.jensen@gmail.com</b><button class="copy" data-copy="mail" type="button">Kopiér</button></div>
+      <div class="citem"><span>Telefon</span><b id="tlf">+45 53 66 94 44</b><button class="copy" data-copy="tlf" type="button">Kopiér</button></div>
+      <div class="citem"><span>LinkedIn</span><a href="https://www.linkedin.com/in/tobias-lindhardt-jensen-288438108" target="_blank" rel="noopener">tobias-lindhardt-jensen</a></div>
+      <div class="citem"><span>Instagram</span><a href="https://www.instagram.com/tobiaslindhardt" target="_blank" rel="noopener">@tobiaslindhardt</a></div>
+    </div>
+    <div class="foot"><span>Tobias Lindhardt · TV- &amp; medietilrettelægger</span><span>København SV</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy), t=el.textContent;
+    var done=function(){b.textContent='Kopieret';setTimeout(function(){b.textContent='Kopiér'},1600)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Markeret';};
+    try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+  });
+});
+</script>
+
+</body>
+</html>
